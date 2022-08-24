@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible content=" ie-edge">
+    <title>Domdemo</title>
+    <style>
+        .all {
+            padding: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        li {
+            padding: 20px;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        .dfclass {
+            display: block;
+            width: 33%;
+            margin: auto;
+            background-color: azure;
+        }
+
+        li a:hover {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <header>
+            <div class="dfclass">
+                <ul id="lfid">
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>About</a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><a href='#'>Services</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id=sfid>
+            <h1 id='head'>Hi there how are you man?</h1>
+            <p>Its the Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis deserunt voluptatem est libero,
+                ipsa iste aspernatur mollitia quas, maxime consequuntur adipisci?</p>
+
+        </section>
+        <div class="dsclass">
+            <form id="ffid" action="whatever.php" onsubmit="return validateForm()" method="post">
+                First Name:<input type="text" name='fname'  >
+                Last Name:<input type="text" name='lname' >
+                Age:<input type="integer" name='age'  >
+                <input type="submit" value='Submit'>
+            </form>
+            <p>Please Verify your given values!</p>
+            <p id=here></p>
+        </div>
+    </div>
+    <script>
+        //get element by ID method
+        document.getElementById("head").innerHTML = "Hi there";
+        //find element by classs name
+        const element = document.getElementsByClassName("dfclass");
+        // const tagelements = element.getElementsByTagName("li");
+
+        //finding all elements value in a form
+        // const all=document.forms["ffid"];
+        // let text="";
+        // for(let i=0;i<all.length;i++){
+        //     text=text+all.elements[i].value + "<br>";
+        // }
+        // document.getElementById("here").innerHTML=text;
+        //validating form First name
+        function validateForm(){
+            let x=documnet.forms["ffid"]["fname"].value;
+            if(x==""){
+                alert("Name can't be Empty");
+                return false;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
